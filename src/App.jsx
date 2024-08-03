@@ -3,13 +3,13 @@ import { useEffect } from "react";
 
 import "./App.css";
 
-import SearchBar from "./compnents/SearchBar/SearchBar";
-import ErrorMessage from "./compnents/ErrorMessage/ErrorMessage";
-import ImageGallery from "./compnents/ImageGallery/ImageGallery";
-import Loader from "./compnents/Loader/Loader";
-import LoadMoreBtn from "./compnents/LoadMoreBtn/LoadMoreBtn";
-import ImageModal from "./compnents/ImageModal/ImageModal";
-import { fetchUnsplashPhotos } from "./Api/fetchimages-api";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
+import Loader from "./components/Loader/Loader";
+import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
+import ImageModal from "./components/ImageModal/ImageModal";
+import { fetchUnsplashPhotos } from "./components/Api/fetchimages-api";
 
 function App() {
   const [page, setPage] = useState(0);
