@@ -10,12 +10,10 @@ const SearchBar = ({ submit }) => {
   const notify = (event) => {
     event.preventDefault();
 
-
     const form = event.target;
     if (!checkQuery(query)) return;
     submit(query);
     setQuery("");
-
   };
   const checkQuery = (query) => {
     const checkValue = query.trim() !== "";
@@ -27,8 +25,7 @@ const SearchBar = ({ submit }) => {
 
   return (
     <header>
-      <form className={css.form}>
-      
+      <form onSubmit={notify} className={css.form}>
         <input
           type="text"
           name="query"
@@ -39,10 +36,8 @@ const SearchBar = ({ submit }) => {
           placeholder="Search images and photos"
           autoFocus
         />
-    
-        <button onClick={notify} type="submit">
-          Search
-        </button>
+
+        <button type="submit">Search</button>
       </form>
       <Toaster />
     </header>
